@@ -1,8 +1,11 @@
 ## Vue 3学习笔记
 Last edit on `Jul 14, 2021`.
+
 By `MeetinaXD`.
+
 Visit my blog: [MeetinaXD' blog](http://meetinaxd.ltiex.com)
-难免有遗漏错误之处，如有疑惑请及时查阅官方文档。
+
+难免有遗漏错误之处，如有疑惑请及时查阅官方文档。
 
 ---
 ## 项目起步
@@ -18,11 +21,16 @@ Visit my blog: [MeetinaXD' blog](http://meetinaxd.ltiex.com)
 ### 安装开发工具
 **vue**
 `npm install -g @vue/cli create-vite-app`
+
 **vite**
 `npm init @vitejs/app`
+
 or
+
 `create-vite-app vue3-demo`
+
 `cva vue3-demo`
+
 上面两个命令等价
 
 ## vue3的新增内容
@@ -301,7 +309,7 @@ id.value = 1
 以上例子模拟了用户快速切换id，而且由于id较大的用户所需的调用时间较长，**较先变化**的id的用户信息晚于**较后变化**的id的用户信息先得到。
 
 因此，输出将是这样的：
-``` json
+``` js
 { id: 1, name: 'Tom', imageURI: 'img.com/img3' }
 { id: 2, name: 'Jeans', imageURI: 'img.com/img2' }
 ```
@@ -330,7 +338,7 @@ id.value = 2
 id.value = 1
 ```
 在id快速地由2切换为1时，`onInvalidate`将被触发，并在`getInfo`内执行Promise请求的reject方法，请求将会终止。输出将是这样的：
-``` json
+``` js
 { id: 1, name: 'Tom', imageURI: 'img.com/img3' }
 ```
 
